@@ -2,9 +2,9 @@ Feature: Onliner
 
   Scenario Outline:Search TV
     Given Open Onliner
-    When Navigate Catalog page
-    And Navigate Electricity in main menu
-    And Navigate Television and video in menu list and TV in main dropdown list
+    When Navigate "Каталог" page
+    And Navigate "Электроника" in main menu
+    And Navigate "Телевидение" in menu list and "Телевизоры" in main dropdown list
     And In the Selecting by parameters part, select manufacturer:"<manufacturer>"
     And In the Selecting by parameters part, select price:"<price>"
     And In the Selecting by parameters part, select diagonal : from "<diagonalFrom>" to "<diagonalTo>"
