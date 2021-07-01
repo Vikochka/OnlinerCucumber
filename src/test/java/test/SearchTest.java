@@ -4,9 +4,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features ={"classpath:feature"},
+        features ={"src/test/java/feature/search.feature"},
         glue = "steps",
-        snippets = CucumberOptions.SnippetType.CAMELCASE
+        plugin = {"pretty"}
 )
 public class SearchTest extends AbstractTestNGCucumberTests {
 }
