@@ -1,10 +1,10 @@
 Feature: Onliner
 
   Scenario Outline:Search TV
-    Given Open Onliner
-    When Navigate "Каталог" page
-    And Navigate "Электроника" in main menu
-    And Navigate "Телевидение и видео" in menu list and "Телевизоры" in main dropdown list
+    Given Opening "https://www.onliner.by/"
+    When I navigate the "Каталог" page
+    And In main menu selected section "Электроника"
+    And In the menu list I select "Телевидение и видео" then in the drop-down window select "Телевизоры"
     And In the Selecting by parameters part, select manufacturer:"<manufacturer>"
     And In the Selecting by parameters part, select price:"<price>"
     And In the Selecting by parameters part, select diagonal : from "<diagonalFrom>" to "<diagonalTo>"

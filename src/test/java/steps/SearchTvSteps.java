@@ -24,22 +24,22 @@ public class SearchTvSteps {
         browser.windowMaximise();
     }
 
-    @Given("Open Onliner")
-    public void openOnliner() {
-        browser.navigate(PropertyReader.getProperty("URL"));
+    @Given("Opening {string}")
+    public void opening(String url) {
+        browser.navigate(url);
     }
 
-    @When("Navigate {string} page")
+    @When("I navigate the {string} page")
     public void navigatePage(String title) {
         mainPage.getHeader().navigatePage(title);
     }
 
-    @And("Navigate {string} in main menu")
+    @And("In main menu selected section {string}")
     public void navigateInMainMenu(String electronics) {
         catalogPage.catalogNavigation(electronics);
     }
 
-    @And("Navigate {string} in menu list and {string} in main dropdown list")
+    @And("In the menu list I select {string} then in the drop-down window select {string}")
     public void navigateInMenuListAndInMainDropdownList(String tvAndVideo,String tv) {
         catalogPage.navigatioList(tvAndVideo, tv);
     }
@@ -78,4 +78,6 @@ public class SearchTvSteps {
             browser.exit();
         }
     }
+
+
 }
