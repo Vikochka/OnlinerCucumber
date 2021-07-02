@@ -23,8 +23,26 @@ public class CatalogPage extends BaseOnlinerPage {
     }
 
     public void navigatioList(String listTitle, String listDropdown) {
-        Button btnNavigateList = new Button(By.xpath(String.format(btnMenuListSection, listTitle)));
-        btnNavigateList.click();
+        int i = 0;
+        int count = 0;
+        StringBuilder stringBuilder = new StringBuilder(listTitle);
+        while( i < stringBuilder.length() ){
+            if( stringBuilder.charAt(i) == ' ' ) {
+                count++;
+            }
+            i++;
+        }
+
+        if (count > 1) {
+            int index = stringBuilder.lastIndexOf(" ");
+            StringBuilder convert = stringBuilder.replace(index, index + 1, " ");
+            Button btnNavigateList = new Button(By.xpath(String.format(btnMenuListSection, convert)));
+            btnNavigateList.click();
+        } else {
+            Button btnNavigateList = new Button(By.xpath(String.format(btnMenuListSection, listTitle)));
+            btnNavigateList.click();
+        }
+
         Label lblNavigateSection = new Label(By.xpath(String.format(btnDropMenuSection, listDropdown)));
         lblNavigateSection.click();
     }
