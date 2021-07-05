@@ -94,8 +94,13 @@ public abstract class BaseElement extends BaseTest {
         return false;
     }
 
+    public By getLocator() {
+        return by;
+    }
     public void sendKeys(String sendKeys) {
-        getElement().sendKeys(sendKeys);
+        waitForIsElementPresent();
+        browser.getDriver().findElement(by).sendKeys(sendKeys);
+
     }
 
     public boolean isSelected() {
