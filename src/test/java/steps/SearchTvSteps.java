@@ -1,7 +1,6 @@
 package steps;
 
 import framework.Browser;
-import framework.PropertyReader;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -41,7 +40,7 @@ public class SearchTvSteps {
 
     @And("In the menu list I select {string} then in the drop-down window select {string}")
     public void navigateInMenuListAndInMainDropdownList(String tvAndVideo,String tv) {
-        catalogPage.navigatioList(tvAndVideo, tv);
+        catalogPage.navigationList(tvAndVideo, tv);
     }
 
     @And("In the Selecting by parameters part, select manufacturer:{string}")

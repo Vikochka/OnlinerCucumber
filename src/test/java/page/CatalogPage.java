@@ -22,7 +22,7 @@ public class CatalogPage extends BaseOnlinerPage {
         lblCatalog.click();
     }
 
-    public void navigatioList(String listTitle, String listDropdown) {
+    public void navigationList(String listTitle, String listDropdown) {
         int i = 0;
         int count = 0;
         StringBuilder stringBuilder = new StringBuilder(listTitle);

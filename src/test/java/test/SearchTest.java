@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
         features ={"src/test/java/feature/search.feature"},
         glue = "steps",
         plugin = {"pretty","html:target/cucumber.html",
-                "json:target/cucumber.json"}
+                "json:target/cucumber.json","json:target/cucumber-reports/CucumberTestReport.json"}
 )
 public class SearchTest extends AbstractTestNGCucumberTests {
 }
