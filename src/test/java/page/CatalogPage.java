@@ -35,7 +35,7 @@ public class CatalogPage extends BaseOnlinerPage {
 
         if (count > 1) {
             int index = stringBuilder.lastIndexOf(" ");
-            StringBuilder convert = stringBuilder.replace(index, index + 1, " ");
+            StringBuilder convert = stringBuilder.replace(index, index + 1, "\u00a0");
             Button btnNavigateList = new Button(By.xpath(String.format(btnMenuListSection, convert)));
             btnNavigateList.click();
         } else {
