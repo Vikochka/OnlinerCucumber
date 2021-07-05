@@ -12,7 +12,7 @@ public class TVPage extends BaseOnlinerPage {
 
     private TextBox txtDiagonalFrom = new TextBox(By.xpath("//div[contains(@class,'schema-filter__label')]/..//div[@class='schema-filter-control schema-filter-control_select']//select[contains(@data-bind,'value: facet.value.from')]"));
     private TextBox txtDiagonalTo = new TextBox(By.xpath("//div[contains(@class,'schema-filter__label')]/..//div[@class='schema-filter-control schema-filter-control_select']//select[contains(@data-bind,'value: facet.value.to')]"));
-    private TextBox txtSelectPriceTo = new TextBox(By.xpath("//*[@id='schema-filter']/div[3]/div[6]/div[2]/div/div[2]/input"));
+    private TextBox txtSelectPriceTo = new TextBox(By.xpath("//div[contains(@class,'schema-filter__label')]/..//div[@class='schema-filter__group']//input[contains(@placeholder,'до')]"));
     private TextBox txtCheckPriceTo = new TextBox(By.xpath("//div[@class='schema-product__group']//div[contains(@class,'schema-product__price')]//span[contains(@data-bind,'format.minPrice')]"));
     private TextBox txtProductBlock = new TextBox(By.xpath("//div[@id='schema-products']//div[contains(@class,'schema-product__group')]"));
     private TextBox txtDescription = new TextBox(By.xpath("//div[@id='schema-products']//div[contains(@class,'schema-product__group')]//div[@class='schema-product__description']"));
