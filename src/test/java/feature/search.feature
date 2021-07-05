@@ -12,4 +12,4 @@ Feature: Onliner
     Then Check that the search results displayed on the page are correct:"<manufacturer>","<price>","<diagonalFrom>","<diagonalTo>","<resolution>"
     Examples:
       | manufacturer | price | diagonalFrom | diagonalTo | resolution          |
-      | Samsung      | 1000  | 40           | 50         | 1920x1080 (Full HD) |
+      | Samsung      | 10000  | 40           | 50         | 1920x1080 (Full HD) |
