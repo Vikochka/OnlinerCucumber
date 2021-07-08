@@ -2,6 +2,7 @@ package framework.elements;
 
 import framework.BaseTest;
 import framework.Browser;
+import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,7 +40,7 @@ public abstract class BaseElement extends BaseTest {
 
     public boolean waitForIsElementPresent() {
         isElementPresent(Integer.valueOf(browser.getTimeoutForCondition()));
-        return false;
+        return true;
     }
 
     public List<WebElement> getElements() {
@@ -56,15 +57,15 @@ public abstract class BaseElement extends BaseTest {
     }
 
     public boolean isElementPresent(int timeout) {
-        WebDriverWait wait = new WebDriverWait(browser.getDriver(), timeout);
+         wait = new WebDriverWait(browser.getDriver(), timeout);
         try {
             browser.getDriver().manage().timeouts().implicitlyWait(Integer.valueOf(browser.getTimeoutForCondition()), TimeUnit.SECONDS);
             element = browser.getDriver().findElement(by);
             return element.isDisplayed();
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     public boolean areElementsPresent(int timeout) {

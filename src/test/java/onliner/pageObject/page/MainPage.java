@@ -1,4 +1,4 @@
-package page;
+package onliner.pageObject.page;
 
 import lombok.Getter;
 import org.openqa.selenium.By;

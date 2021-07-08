@@ -8,7 +8,6 @@ import org.testng.Assert;
 public class BasePage extends BaseTest {
     protected String title;
     protected By titleLocator;
-
     public BasePage(final By locator, final String pageTitle) {
         init(locator, pageTitle);
         assertIsOpen();
@@ -22,10 +21,9 @@ public class BasePage extends BaseTest {
     public void assertIsOpen() {
         Label elem = new Label(titleLocator, title);
         try {
-            elem.waitForIsElementPresent();
+            elem.waitForElementIsPresent();
         } catch (Throwable e) {
             Assert.assertTrue(true, title + " does not open");
-
         }
     }
 }

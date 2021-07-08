@@ -8,7 +8,7 @@
         <parameter name="priceTo" value="1000"></parameter>
         <parameter name="resolution" value="1920x1080 (Full HD)"></parameter>
         <classes>
-            <class name="test.SearchTest"/>
+            <class name="onliner.test.SearchTest"/>
         </classes>
     </test>
 </suite>

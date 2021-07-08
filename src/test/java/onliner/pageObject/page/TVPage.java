@@ -1,4 +1,4 @@
-package page;
+package onliner.pageObject.page;
 
 import framework.elements.Checkbox;
 import framework.elements.TextBox;

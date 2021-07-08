@@ -1,4 +1,4 @@
-package page;
+package onliner.pageObject.page;
 
 import framework.elements.Button;
 import framework.elements.Label;
@@ -17,12 +17,12 @@ public class CatalogPage extends BaseOnlinerPage {
         super(By.xpath(String.format(pageLocator, pageTitle)), "Catalog page");
     }
 
-    public void catalogNavigation(String catalogNavigation) {
+    public void navigateCatalog(String catalogNavigation) {
         Label lblCatalog = new Label(By.xpath(String.format(lblMainMenuNavigation, catalogNavigation)));
         lblCatalog.click();
     }
 
-    public void navigationList(String listTitle, String listDropdown) {
+    public void navigateList(String listTitle, String listDropdown) {
         int i = 0;
         int count = 0;
         StringBuilder stringBuilder = new StringBuilder(listTitle);

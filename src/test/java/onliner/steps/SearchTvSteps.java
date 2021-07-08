@@ -1,4 +1,4 @@
-package steps;
+package onliner.steps;
 
 import framework.Browser;
 import io.cucumber.java.After;
@@ -7,9 +7,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import page.CatalogPage;
-import page.MainPage;
-import page.TVPage;
+import onliner.pageObject.page.CatalogPage;
+import onliner.pageObject.page.MainPage;
+import onliner.pageObject.page.TVPage;
 
 public class SearchTvSteps {
     protected static Browser browser = Browser.getInstance();
@@ -30,17 +30,17 @@ public class SearchTvSteps {
 
     @When("I navigate the {string} page")
     public void navigatePage(String title) {
-        mainPage.getHeader().navigatePage(title);
+        mainPage.getMainMenu().navigatePage(title);
     }
 
     @And("In main menu selected section {string}")
     public void navigateInMainMenu(String electronics) {
-        catalogPage.catalogNavigation(electronics);
+        catalogPage.navigateCatalog(electronics);
     }
 
     @And("In the menu list I select {string} then in the drop-down window select {string}")
     public void navigateInMenuListAndInMainDropdownList(String tvAndVideo,String tv) {
-        catalogPage.navigationList(tvAndVideo, tv);
+        catalogPage.navigateList(tvAndVideo, tv);
     }
 
     @And("In the Selecting by parameters part, select manufacturer:{string}")
